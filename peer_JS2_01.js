@@ -79,15 +79,19 @@ while (counter > 0){
 	counter--;
 }
 
-
-
-console.log(value);
-
 function thisFunction(val){
 	val = val.toString();
-	if(val.length > 1){
-	val = val.substring(1, val.length);
+	valArray = [];
+	
+	for (i = 0; i < val.length; i++){
+	valArray[i] = val[i];
 	};
+	
+	if(valArray.length > 1){
+	/*val = val.substring(1, val.length);*/
+	valArray.shift();
+	};
+	val = valArray.toString();
 	return val;
 };
 
